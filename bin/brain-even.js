@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import { readName, reradAnswer } from '../src/cli.js';
 
-console.log('\nWelcom to the Brain Games!');
-const name = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${name}!`);
+const name = readName();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 let counter = 3;
@@ -17,7 +15,7 @@ while (counter > 0) {
     answerTrue = 'no';
   }
 
-  const answer = readlineSync.question(`Question: \n${number}\nYour answer: `);
+  const answer = reradAnswer(`Question: \n${number}\nYour answer: `);
 
   if (answerTrue === answer) {
     console.log('Correct!');

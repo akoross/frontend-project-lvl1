@@ -4,4 +4,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e08a3d5e8f993bedca7b/maintainability)](https://codeclimate.com/github/akoross/frontend-project-lvl1/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e08a3d5e8f993bedca7b/test_coverage)](https://codeclimate.com/github/akoross/frontend-project-lvl1/test_coverage)
 
-https://asciinema.org/a/qGViXS48A7jZmEyrCSH3L3QCT
+brain-even https://asciinema.org/a/qGViXS48A7jZmEyrCSH3L3QCT
+brai-calc https://asciinema.org/a/5nQ6gyJOLwk9BHQjhSWipvejE
