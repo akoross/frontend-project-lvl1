@@ -15,7 +15,7 @@ while (counter > 0) {
     answerTrue = 'no';
   }
 
-  const answer = reradAnswer(`Question: \n${number}\nYour answer: `);
+  const answer = reradAnswer(`Question: ${number}\nYour answer: `);
 
   if (answerAudit(answer, answerTrue, name)) {
     counter -= 1;
