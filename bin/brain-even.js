@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readName, reradAnswer } from '../src/cli.js';
+import { readName, reradAnswer, answerAudit } from '../src/cli.js';
 
 const name = readName();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
@@ -17,13 +17,9 @@ while (counter > 0) {
 
   const answer = reradAnswer(`Question: \n${number}\nYour answer: `);
 
-  if (answerTrue === answer) {
-    console.log('Correct!');
+  if (answerAudit(answer, answerTrue, name)) {
     counter -= 1;
   } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${answerTrue}'.Let's try again, ${name}!`,
-    );
     counter = -1;
   }
 }

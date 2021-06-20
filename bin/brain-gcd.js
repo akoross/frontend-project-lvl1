@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readName, reradAnswer } from '../src/cli.js';
+import { readName, reradAnswer, answerAudit } from '../src/cli.js';
 
 const name = readName();
 console.log('Find the greatest common divisor of given numbers.');
@@ -19,13 +19,9 @@ while (counter > 0) {
 
   const answer = reradAnswer(question);
 
-  if (answerTrue === Number(answer)) {
-    console.log('Correct!');
+  if (answerAudit(Number(answer), answerTrue, name)) {
     counter -= 1;
   } else {
-    console.log(
-      `'${answer}' is wrong answer ;(. Correct answer was '${answerTrue}'.\nLet's try again, ${name}!`,
-    );
     counter = -1;
   }
 }

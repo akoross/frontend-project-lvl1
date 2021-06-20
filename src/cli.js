@@ -12,4 +12,16 @@ const reradAnswer = (message) => {
   return answer;
 };
 
-export { readName, reradAnswer };
+const answerAudit = (answer, answerTrue, name) => {
+  const result = answerTrue === answer;
+  if (result) {
+    console.log('Correct!');
+  } else {
+    console.log(
+      `'${answer}' is wrong answer ;(. Correct answer was '${answerTrue}'.\nLet's try again, ${name}!`,
+    );
+  }
+  return result;
+};
+
+export { readName, reradAnswer, answerAudit };
